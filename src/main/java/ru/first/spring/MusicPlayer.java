@@ -1,14 +1,18 @@
 package ru.first.spring;
 
-public class MusicPlayer {
-    private Music music;
+import java.util.List;
 
-    //IoC
-    public MusicPlayer(Music music) {
-        this.music = music;
-    }
+public class MusicPlayer {
+    private List<Music> musicList;
+    private int value;
 
     public void playMusic() {
-        System.out.println("Playing: " + music.getSong());
+        for (Music music : musicList){
+            System.out.println("Playing: " + music.getSong());
+        }
+    }
+
+    public void setMusicList(List<Music> musicList) {
+        this.musicList = musicList;
     }
 }

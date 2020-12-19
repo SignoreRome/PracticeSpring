@@ -12,8 +12,25 @@
 <!--        <constructor-arg value="Roma"/>-->
     </bean>
 
-    <bean id="rapBean"
-        class="ru.first.spring.RapMusic">
+    <bean id="listMusic" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <bean class="ru.first.spring.RockMusic"/>
+                <bean class="ru.first.spring.ClassicalMusic"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="musicPlayer"
+          class="ru.first.spring.MusicPlayer">
+        <property name="musicList" ref="listMusic"/>
+<!--        <property name="musicList">-->
+<!--            <list>-->
+<!--                <ref bean="musicBean"/>-->
+<!--                <bean class="ru.first.spring.RockMusic"/>-->
+<!--                <bean class="ru.first.spring.ClassicalMusic"/>-->
+<!--            </list>-->
+<!--        </property>-->
     </bean>
 
 </beans>
