@@ -7,30 +7,6 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="musicBean"
-          class="ru.first.spring.RapMusic">
-<!--        <constructor-arg value="Roma"/>-->
-    </bean>
-
-    <bean id="listMusic" class="java.util.ArrayList">
-        <constructor-arg>
-            <list>
-                <bean class="ru.first.spring.RockMusic"/>
-                <bean class="ru.first.spring.ClassicalMusic"/>
-            </list>
-        </constructor-arg>
-    </bean>
-
-    <bean id="musicPlayer"
-          class="ru.first.spring.MusicPlayer">
-        <property name="musicList" ref="listMusic"/>
-<!--        <property name="musicList">-->
-<!--            <list>-->
-<!--                <ref bean="musicBean"/>-->
-<!--                <bean class="ru.first.spring.RockMusic"/>-->
-<!--                <bean class="ru.first.spring.ClassicalMusic"/>-->
-<!--            </list>-->
-<!--        </property>-->
-    </bean>
+    <context:component-scan base-package="ru.first.spring"/>
 
 </beans>
