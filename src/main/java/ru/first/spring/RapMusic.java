@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-@Component
+//@Component
 public class RapMusic implements Music{
     private List<String> songList = Arrays.asList("Slim shady", "Fuck the police", "Without Me");
     private Random random = new Random();

@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-@Component
+//@Component
 public class RockMusic implements Music{
     private List<String> songList = Arrays.asList("Bohemian Rhapsody", "Wind of Change", "Highway to Hell");
     private Random random = new Random();
